@@ -9,7 +9,7 @@ export default function MyOrder() {
     let email = localStorage.getItem("email");
     const fetchData = async () => {
         try {
-            const response = await fetch(`http://localhost:8000/orderData/getOrder/${email}`, {
+            const response = await fetch(`https://kind-blue-centipede-robe.cyclic.app/orderData/getOrder/${email}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'

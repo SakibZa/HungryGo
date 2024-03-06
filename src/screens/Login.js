@@ -11,7 +11,7 @@ export default function Login() {
   const handleSubmit = async (event) =>{
 
      event.preventDefault();
-     const response = await fetch('http://localhost:8000/user/loginUser',{
+     const response = await fetch('https://kind-blue-centipede-robe.cyclic.app/user/loginUser',{
 
         method :'POST',
         headers:{

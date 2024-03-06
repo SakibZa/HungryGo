@@ -12,7 +12,7 @@ export default function Cart() {
     }));
     const handleCheckOut = async () => {
         const userEmail = localStorage.getItem('email');
-        const response = await fetch('http://localhost:8000/orderData/createOrder', {
+        const response = await fetch('https://kind-blue-centipede-robe.cyclic.app/orderData/createOrder', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

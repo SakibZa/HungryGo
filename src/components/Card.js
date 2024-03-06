@@ -19,8 +19,6 @@ export default function Card({foodItem, option,}) {
         break;
       }
     }
-    console.log(food)
-    console.log(new Date())
     if (food !== []) {
       if (food.size === size) {
         await dispatch({ type: "UPDATE", id: foodItem._id, price: finalPrice, qty: qty })
@@ -34,18 +32,10 @@ export default function Card({foodItem, option,}) {
       }
       return
     }
-
     await dispatch({ type: "ADD", id: foodItem._id, name: foodItem.name, price: finalPrice, qty: qty, size: size })
-
-
     alert(`Added ${foodItem.name}  ${qty} Quantity to Cart`);
 
   }
-
-
-  console.log("data", data)
-
-  
   return (
     <div> <div>
     <div

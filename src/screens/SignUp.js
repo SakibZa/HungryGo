@@ -1,14 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link ,useNavigate} from "react-router-dom";
 import { useRef } from "react";
 export default function SignUp() {
   const nameRef = useRef("");
   const emailRef = useRef("");
   const passwordRef = useRef("");
   const addressRef = useRef("");
+  const navigate = useNavigate();
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const response = await fetch("http://localhost:8000/user/createUser", {
+    const response = await fetch("https://kind-blue-centipede-robe.cyclic.app/user/createUser", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -25,6 +26,10 @@ export default function SignUp() {
 
     if (!result.success) {
       console.log("invalid creadentials");
+    }
+    if(result.success)
+    {
+      navigate('/login');
     }
   };
   return (

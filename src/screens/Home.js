@@ -10,11 +10,11 @@ export default function Home() {
 
 
   const loadData = async () => {
-    const request1 = fetch("http://localhost:8000/foodItem/getAllItem").then(
+    const request1 = fetch("https://kind-blue-centipede-robe.cyclic.app/foodItem/getAllItem").then(
       (response) => response.json()
     );
     const request2 = fetch(
-      "http://localhost:8000/foodCategory/getCategory"
+      "https://kind-blue-centipede-robe.cyclic.app/foodCategory/getCategory"
     ).then((response) => response.json());
     Promise.all([request1, request2])
       .then(([data1, data2]) => {
